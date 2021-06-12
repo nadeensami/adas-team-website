@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import jobboard from "../assets/img/jobboard.svg";
 import blank_image from "../assets/img/blank.svg";
 
+
 /**
  * Displays the Job Board with data
  * pulled in from Firebase
@@ -19,6 +20,7 @@ class JobBoard extends React.Component {
 	componentDidMount() {
 		db.collection("job-postings")
 			.orderBy("created", "asc")
+
 			.get()
 			.then((snapshot) => {
 				const jobs = [];
@@ -137,6 +139,7 @@ const JobPosting = ({
 					<a
 						id="email"
 						className="flex-1 border text-center border-blue py-3 bg-white text-blue font-title font-semibold rounded-lg uppercase"
+
 						href={`mailto:${email}`}
 					>
 						Contact
@@ -146,6 +149,7 @@ const JobPosting = ({
 					<a
 						id="application_link"
 						className="flex-1 border text-center border-blue py-3 bg-blue text-white hover:text-white font-title font-semibold rounded-lg uppercase"
+
 						href={apply_link}
 					>
 						Apply

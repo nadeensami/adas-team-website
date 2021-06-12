@@ -10,6 +10,7 @@ function Header({ title, subtitle, additional, homepage }) {
 					homepage
 						? "font-title text-5xl text-left md:text-7xl md:text-center md:text-blue animate-fade-in-down"
 						: "text-center lg:text-left"
+
 				}
 			>
 				{title}
@@ -17,6 +18,7 @@ function Header({ title, subtitle, additional, homepage }) {
 			<p className="font-body text-left md:text-center lg:text-left italic text-lg">
 				<Typist avgTypingDelay={40} stdTypingDelay={0}>
 					<Typist.Delay ms={800} />
+
 					{subtitle}
 				</Typist>
 				<b>{additional || ""}</b>

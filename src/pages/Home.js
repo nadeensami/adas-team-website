@@ -5,6 +5,7 @@ import BigBot from "../assets/img/ada-home-bot.png";
 import { Link } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import { IoIosArrowDown } from "react-icons/io";
 
 // Import components
@@ -25,6 +26,7 @@ AOS.init({
 	mirror: false, // whether elements should animate out while scrolling past them
 	anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
+
 
 class Home extends React.Component {
 	// Constants
@@ -59,12 +61,14 @@ class Home extends React.Component {
 						src={BigBot}
 						alt="Ada's Home Bot waving"
 						className="absolute inset-y-0 right-0 md:mt-1 z-40 lg:inset-y-0 lg:right-0 "
+
 					></img>
 
 					{/* Welcome title */}
 					<div
 						id="home-title"
 						className="flex flex-col place-items-center inline-block mt-96 w-11/12 lg:mt-72 pt-2 z-30"
+
 					>
 						<Header
 							title="ADA'S TEAM"
@@ -135,6 +139,7 @@ class Home extends React.Component {
 							data-aos-delay="500"
 							data-aos-easing="ease-in-sine"
 						>
+
 							{/** divs within flex box **/}
 							{sponsors &&
 								sponsors.map(({ company_name, image }) => (
